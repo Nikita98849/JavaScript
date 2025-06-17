@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Fetch API</title></head>
+    <body>
+        <button onclick="getUser()">Get User</button>
+        <p id="text"></p>
+
+        <script>
+            function getUser()
+            {
+                fetch("'https://fakestoreapi.com/products/1'")
+                .then(Response=>Response.json())
+                .then(data=>{
+                      document.getElementById("text").innerText=JSON.stringify(data,null,2);
+                });
+            }
+        </script>
+    </body>
+</html>

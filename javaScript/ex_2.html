@@ -1,0 +1,28 @@
+<html>
+    <haed></haed>
+
+<body>
+    <label> Enter value 1:</label>
+    <input type="text" id="val1"/>
+    <br />
+    <br/>
+    <label> Enter value 2: </label>
+    <input type="text" id="val2"/>
+    <br/>
+    <button onclick="getAdd()">Click To Add</button>
+
+    <p id="result"></p>
+    <script type="text/javascript">
+    function getAdd(){
+        const num1= Number(document.getElementById("val1").value);
+        const num2=Number(document.getElementById("val2").value);
+        const add=num1+num2;
+        document.getElementById("result").innerHTML = "Addition:=" + add;
+        document.getElementById("result").style.color ="green";
+
+    }
+       
+    </script>
+</body>
+
+</html>

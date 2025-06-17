@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head> Fetch api example</head>
+</head>
+<body>
+    <h2>fetch API JSON EXAMPLE</h2>
+    <button onclick="loaddata()">Load Data</button>
+    <p id="output"></p>
+
+    <script>
+        function loaddata(){
+            fetch ("https://fakestoreapi.com/products")
+            .then(response=> response.json())
+            .then(data =>{
+                console.log(data);
+                document.getElementById("output").innerText= "error fetching data";
+            });
+        }
+    </script>
+</body>
+</html>

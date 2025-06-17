@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Validation</title>
+    </head>
+    <body>
+    <p id="text"></p>
+
+    <form id="form">
+        Name: <input type="text" id="name"/><br>
+        Age: <input type="number" id="age"/><br><br>
+        <input type="submit" value="Submit"/>
+    </form>
+    <div id="result"></div>
+    <script>
+        document.getElementById("form").addEventListener("submit",function(e)
+        {
+            e.preventDefault();
+            const name=document.getElementById("name").value;
+            const age=document.getElementById("age").value;
+            document.getElementById("result").innerHTML="Name :"+name+"<br>Age :"+age;
+
+        });
+    </script>
+</html>
